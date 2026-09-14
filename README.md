@@ -20,8 +20,9 @@ gcc main.c Stack.c -o stack
 
 Below is a small block diagram showing how the project components interact and how the stack is represented internally (linked list of nodes).
 
-```
-main.c → Stack API (push / pop / peek) → Stack (Linked List) → Node [data, next] → Node [data, next] → NULL
+```mermaid
+graph LR
+    A["main.c"] --> B["Stack API<br/>(push / pop / peek)"] --> C["Stack<br/>(Linked List)"] --> D["Node<br/>[data, next]"] --> E["Node<br/>[data, next]"] --> F["NULL"]
 ```
 
 And a simple ASCII view of the linked list (top is leftmost):

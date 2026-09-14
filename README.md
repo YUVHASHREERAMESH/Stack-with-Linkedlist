@@ -16,21 +16,18 @@ Use a Compiler such as `gcc`
 gcc main.c Stack.c -o stack
 ```
 
-## Structure Diagram
+## Block Diagram
 
-The following block diagram shows the high-level structure and relationships of the implementation:
+Below is a small block diagram showing how the project components interact and how the stack is represented internally (linked list of nodes).
 
 ```
-       main.c
-         |
-   Header.h (in header.h)
-         |
-    Stack.c
-    /        \
-Hash Table   TABLE_SIZE = 1000
-with Array
-    |
-Linked List Nodes
+main.c → Stack API (push / pop / peek) → Stack (Linked List) → Node [data, next] → Node [data, next] → NULL
+```
+
+And a simple ASCII view of the linked list (top is leftmost):
+
+```
+top -> [data | next] -> [data | next] -> NULL
 ```
 
 ## Run
